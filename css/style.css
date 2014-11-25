@@ -100,7 +100,9 @@ a.gallery:visited {
 	display: block;
 	width:100%;
 	vertical-align: top;
-	
+}
+.modal-dialog {
+	z-index: 2000;
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {

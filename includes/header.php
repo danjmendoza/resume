@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Dan Mendoza, UX designer, Interaction designer, Irvine, California.">
-		<meta name="keywords" content="UX design, Irvine, CA, Interaction designer, Irvine, California, UX designer, Orange County, CA, freelance UX designer, Irvine, CA.">
+		<meta name="description" content="Dan Mendoza, PHP Developer, Architect, Exeter, California.">
+		<meta name="keywords" content="PHP, Kohana, Exeter, CA, Wordpress, Exeter, California, Drupal, jQuery, CA">
 		<meta name="author" content="Dan Mendoza">
 
 		<title>Dan Mendoza, Programer / architect / developer</title>
@@ -93,9 +93,9 @@
 
 					<div class="col-md-4 text-right">
 						<h3>Flexible. Extendible. Structure.</h3>
-						<!-- <br>
+						<br>
 						<a href="#" class="btn btn-alex toggle active" rel="#bio">Bio</a>
-						<a href="#" class="btn btn-alex toggle" rel="#folio">Folio</a> -->
+						<a href="#" class="btn btn-alex toggle" rel="#folio">Folio</a>
 					</div>
 
 				</div>
