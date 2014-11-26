@@ -14,19 +14,19 @@
 	<div class="row thumbs">
 		<div class="col-md-3 item kohana">
 			<a href="http://www.skoobin.com" target="_blank" class="thumbnail">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/skoobin-thumb-color.png" alt="...">
 			</a>
 			Skoobin.com
 		</div>
 		<div class="col-md-3 item kohana">
 			<a href="http://www.versionup.co" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/version-up-thumb-color.png" alt="...">
 			</a>
 			VersionUp.co
 		</div>
 		<div class="col-md-3 item kohana">
 			<a href="http://www.engravedbricks.com/demo" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/engraved-bricks-thumb-color.gif" alt="...">
 			</a>
 			Engravedbricks.com/demo
 		</div>
@@ -38,37 +38,37 @@
 		</div>
 		<div class="col-md-3 item drupal">
 			<a href="http://www.exeterchamber.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/exeter-chamber-thumb-color.png" alt="...">
 			</a>
 			Exeter Chamber of Commerce
 		</div>
 		<div class="col-md-3 item drupal">
 			<a href="http://www.abcbookkeepingandtax.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/abc-bookkeeping-thumb-color.png" alt="...">
 			</a>
 			ABC Bookkeeping and Tax
 		</div>
 		<div class="col-md-3 item wordpress">
 			<a href="http://www.auaweb.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/armon-thumb-color.png" alt="...">
 			</a>
 			Armona Union Academy
 		</div>
 		<div class="col-md-3 item wordpress">
 			<a href="http://www.careyseminary.org" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/cary-seminary-thumb-color.png" alt="...">
 			</a>
 			Carey Seminary
 		</div>
 		<div class="col-md-3 item drupal">
 			<a href="http://www.cemcosteel.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/cemco-thumb-color.png" alt="...">
 			</a>
 			http://www.cemcosteel.com
 		</div>
 		<div class="col-md-3 item kohana wordpress">
 			<a href="http://www.site.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/crowdhydro-thumb-color.png" alt="...">
 			</a>
 			Crowd Hyrdology
 		</div>
@@ -86,37 +86,37 @@
 		</div>
 		<div class="col-md-3 item wordpress">
 			<a href="http://www.hapybear.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/hapy-bear-thumb-color.png" alt="...">
 			</a>
 			http://www.hapybear.com
 		</div>
 		<div class="col-md-3 item drupal">
 			<a href="http://www.hccporterville.org" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/hcc-thumb-color.png" alt="...">
 			</a>
 			HCC Porterville
 		</div>
 		<div class="col-md-3 item drupal">
 			<a href="http://www.icfwest.com" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/icf-west-thumb-color.png" alt="...">
 			</a>
 			ICF West
 		</div>
 		<div class="col-md-3 item drupal">
 			<a href="http://www.exeterkiwanis.org" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/exeter-kiwanis-thumb-color.png" alt="...">
 			</a>
 			Exeter Kiwanis
 		</div>
 		<div class="col-md-3 item wordpress">
 			<a href="http://www.nielseninsurance.net" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/nielsen-insurance-thumb-color.png" alt="...">
 			</a>
 			Nielsen Insurance
 		</div>
 		<div class="col-md-3 item wordpress">
 			<a href="http://www.pvpef.org" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/.png" alt="...">
+				<img src="/img/portfolio/pef-thumb-color.png" alt="...">
 			</a>
 			http://www.pvpef.org
 		</div>
@@ -134,13 +134,13 @@
 		</div>
 		<div class="col-md-3 item responsive">
 			<a href="http://www.massbigdata.org" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/rps-environmental-thumb-color.png" alt="...">
+				<img src="/img/portfolio/mass-big-data-thumb-color.png" alt="...">
 			</a>
 			Mass Big Data
 		</div>
 		<div class="col-md-3 item responsive">
 			<a href="http://www.flconst.org" class="thumbnail" target="_blank">
-				<img src="/img/portfolio/rps-environmental-thumb-color.png" alt="...">
+				<img src="/img/portfolio/fl-construction-thumb-color.png" alt="...">
 			</a>
 			F&L Construction
 		</div>
