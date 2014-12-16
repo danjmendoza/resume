@@ -1,6 +1,6 @@
 <?php
 
-class Job {
+class Job extends Entity{
 
 	protected $orm_job = NULL;
 
@@ -20,6 +20,11 @@ class Job {
 		return $jobs;
 	}
 
+	public static function create()
+	{
+		return new Job(ORM::factory('Job'));
+	}
+
 	public static function instance(Model_Job $orm_job)
 	{
 		return new Job($orm_job);
@@ -27,33 +32,56 @@ class Job {
 
 	public function __construct(Model_Job $orm_job)
 	{
-		$this->orm_job = $orm_job;
+		$this->orm_object = $orm_job;
 	}
 
-	public function link()
+	public function link($link = NULL)
 	{
-		return $this->orm_job->link;
+		return $this->field_string('link', $link);
 	}
 
-	public function title()
+	public function title($title = NULL)
 	{
-		return $this->orm_job->title;
+		return $this->field_string('title', $title);
 	}
 
-	public function status()
+	public function status($status = NULL)
 	{
-		return $this->orm_job->status;
+		return $this->field_string('status', $status);
 	}
 
-	public function progress()
+	public function progress($progress = NULL)
 	{
-		return $this->orm_job->progress;
+		return $this->field_string('progress', $progress);
 	}
 
-	public function company()
+	public function company(Company $company = NULL)
 	{
-		$orm_company = ORM::factory('Company', $this->orm_job->company_id);
-		return Company::instance($orm_company);
+		return $this->field_object('company', $company);
+	}
+
+	public function save()
+	{
+		$orm_job = ORM::factory('Job')
+						->where('company_id', '=', $this->company()->id())
+						->where('title', '=', $this->title())
+						->find();
+		if (!$orm_job->loaded())
+		{
+			return parent::save();
+		}
+		else
+		{
+			$orm_object = $orm_job;
+			return $this;
+		}
+	}
+
+	public function as_array()
+	{
+		$job_array = parent::as_array();
+		$job_array['company'] = $this->company()->as_array();
+		return $job_array;
 	}
 
 }

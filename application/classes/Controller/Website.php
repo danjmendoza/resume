@@ -99,4 +99,11 @@ class Controller_Website extends Controller_Template {
 		}
 	}
 
+	protected function post()
+	{
+		$post_data = file_get_contents('php://input');
+		parse_str($post_data, $post);
+		return $post;
+	}
+
 }
