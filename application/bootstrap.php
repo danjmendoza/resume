@@ -126,12 +126,20 @@ Kohana::modules(array(
 	'database'	=> MODPATH.'database',   // Database access
 	'orm'		=> MODPATH.'orm',        // Object Relationship Mapping
 	'mysqli'	=> MODPATH.'mysqli',  // User guide and API documentation
+	'restful'	=> MODPATH.'restful',
 	));
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('v1', '<directory>/(<controller>(/<action>(/<id>)))')
+	->defaults(array(
+		'directory' => 'v1',
+		'controller' => 'index',
+		'action'     => 'index',
+	));
+
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'index',

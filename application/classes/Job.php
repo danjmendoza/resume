@@ -8,6 +8,7 @@ class Job extends Entity{
 	{
 		$orm_jobs = ORM::factory('Job')
 						->where('status', '=', 'active')
+						->order_by('date_added', 'DESC')
 						->find_all();
 
 		$jobs = array();

@@ -1,13 +1,9 @@
 <div class="container">
 	<div class="row">
-		<div class="btn-group">
-			<button type="button" class="btn btn-default">Add Job</button>
-		</div>
-	</div>
-	<div class="row">
 		<div class="col-md-6 add-form" ng-controller="AddJobController">
-			<h2>Add New Job</h2>
-			<form ng-submit="add_job()">
+			<button class="btn btn-success" ng-click="addForm = !addForm">Add New Job</button>
+			<form ng-submit="add_job()" ng-show="addForm">
+				<input type="hidden" ng-value="formData.status">
 				<div class="form-group col-md-6">
 					<input type="job-title" ng-model="formData.title" class="form-control" id="job-title" placeholder="Job Title">
 				</div>
@@ -21,13 +17,12 @@
 					<input type="company-website" ng-model="formData.company.website" class="form-control" id="company-website" placeholder="Company Website">
 				</div>
 				<div class="form-group col-md-6">
-					<select name="job-url" class="form-control" ng-model="formData.status">
+					<select name="job-url" class="form-control" ng-model="formData.progress">
 						<option value="Not Sent" selected>Not Sent</option>
 						<option value="App Sent">App Sent</option>
 						<option value="Dead End">Dead End</option>
 					</select>
 				</div>
-				<pre>{{formData}}</pre>
 				<div class="form-group col-md-6">
 					<input type="submit" class="btn btn-success" value="Add Job">
 				</div>
