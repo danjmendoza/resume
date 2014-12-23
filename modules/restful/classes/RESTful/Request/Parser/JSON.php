@@ -16,12 +16,17 @@ class RESTful_Request_Parser_JSON implements RESTful_Request_IParser
      */
     static public function parse($request_body)
     {
-    	$post_data = file_get_contents('php://input');
-		parse_str($post_data, $post);
-		return $post;
-    	var_dump($request_body);
         $decoded = json_decode($request_body);
-        var_dump($decoded);
-        return (json_last_error() === JSON_ERROR_NONE) ? $decoded : FALSE;
+        if (json_last_error() === JSON_ERROR_NONE)
+        {
+            return $decoded;
+        }
+        else
+        {
+            $post_data = file_get_contents('php://input');
+            parse_str($post_data, $post);
+            return $post;
+        }
+		return FALSE;
     }
 }

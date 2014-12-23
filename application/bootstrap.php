@@ -134,6 +134,7 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 Route::set('v1', '<directory>/(<controller>(/<action>(/<id>)))')
+	
 	->defaults(array(
 		'directory' => 'v1',
 		'controller' => 'index',

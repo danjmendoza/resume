@@ -56,18 +56,23 @@ class Job extends Entity{
 		return $this->field_string('progress', $progress);
 	}
 
+	public function coverletter($coverletter = NULL)
+	{
+		return $this->field_string('coverletter', $coverletter);
+	}
+
 	public function company(Company $company = NULL)
 	{
 		return $this->field_object('company', $company);
 	}
 
-	public function save()
+	public function save($force = TRUE)
 	{
 		$orm_job = ORM::factory('Job')
 						->where('company_id', '=', $this->company()->id())
 						->where('title', '=', $this->title())
 						->find();
-		if (!$orm_job->loaded())
+		if (!$orm_job->loaded() OR $force = true)
 		{
 			return parent::save();
 		}

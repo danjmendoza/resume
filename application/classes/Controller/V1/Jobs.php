@@ -14,7 +14,17 @@ class Controller_V1_Jobs extends  RESTful_Controller {
 
 	public function action_update()
 	{
-		echo "update";
+		$job_data = $this->request->body();
+		var_dump($job_data);
+		$job_array = Job::instance(ORM::factory('Job', $job_data->id))
+							->save(TRUE)
+							->as_array();
+
+		echo json_encode(array(
+			'error'		=> FALSE,
+			'message'	=> 'Job Archived',
+			'job'		=> $job_array,
+		));
 	}
 
 	public function action_create()
@@ -28,6 +38,7 @@ class Controller_V1_Jobs extends  RESTful_Controller {
 		$job = Job::create()
 					->title($post_data['title'])
 					->link($post_data['link'])
+					->coverletter($post_data['coverletter'])
 					->status('active')
 					->progress($post_data['progress'])
 					->company($company)
@@ -42,7 +53,15 @@ class Controller_V1_Jobs extends  RESTful_Controller {
 
 	public function action_delete()
 	{
-		echo "delete";
+		$job = Job::instance(ORM::factory('Job', $_GET['job_id']));
+		$job_array = $job->as_array();
+		$job->delete();
+
+		echo json_encode(array(
+			'error'		=> FALSE,
+			'message'	=> 'Job Removed',
+			'job'		=> $job_array,
+		));
 	}
 
 }

@@ -1,0 +1,3 @@
+[submodule "modules/rest"]
+	path = modules/rest
+	url = https://github.com/SupersonicAds/kohana-restful-api.git
