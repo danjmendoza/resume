@@ -14,7 +14,7 @@
 		<?php foreach ($sites as $site) { ?>
 			<div class="col-md-3 item <?php echo $site->categories(); ?>">
 				<a href="<?php echo $site->url(); ?>" target="_blank" class="thumbnail">
-					<img src="/img/portfolio/<?php echo $site->image(); ?>" alt="...">
+					<img src="/assets/img/portfolio/<?php echo $site->image(); ?>" alt="...">
 				</a>
 				<?php echo $site->title(); ?>
 			</div>

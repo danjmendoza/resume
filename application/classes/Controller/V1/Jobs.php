@@ -1,35 +1,35 @@
 <?php
 
-class Controller_V1_Jobs extends  RESTful_Controller {
+class Controller_V1_Jobs extends  Controller_Rest {
 
-	public function action_get()
+	public function action_index()
 	{
 		$jobs = array();
 		foreach (Job::active_jobs() as $job_object)
 		{
 			$jobs[] = $job_object->as_array();
 		}
-		echo json_encode($jobs);
+		$this->rest_output($jobs);
 	}
 
 	public function action_update()
 	{
-		$job_data = $this->request->body();
-		var_dump($job_data);
-		$job_array = Job::instance(ORM::factory('Job', $job_data->id))
-							->save(TRUE)
-							->as_array();
-
-		echo json_encode(array(
+		$job = Job::instance(ORM::factory('Job', $this->_params['id']))
+							->update($this->_params)
+							->save(TRUE);
+		$job_array = $job->as_array();
+		$output = array(
 			'error'		=> FALSE,
-			'message'	=> 'Job Archived',
+			'message'	=> 'Job '.$job->title().' Updated',
 			'job'		=> $job_array,
-		));
+		);
+		$this->rest_output($output);
 	}
 
 	public function action_create()
 	{
-		$post_data = $this->request->body();
+		$post_data = $this->_params;
+		var_dump($post_data);
 		$company = Company::create()
 						->title($post_data['company']['title'])
 						->website($post_data['company']['website'])
@@ -44,24 +44,27 @@ class Controller_V1_Jobs extends  RESTful_Controller {
 					->company($company)
 					->save();
 
-		echo json_encode(array(
+		$output = array(
 			'error'		=> FALSE,
 			'message'	=> 'Job Added',
 			'job'		=> $job->as_array(),
-		));
+		);
+		$this->rest_output($output);
 	}
 
 	public function action_delete()
 	{
-		$job = Job::instance(ORM::factory('Job', $_GET['job_id']));
+		$job_id = $this->request->param('id');
+		$job = Job::instance(ORM::factory('Job', $job_id));
 		$job_array = $job->as_array();
 		$job->delete();
 
-		echo json_encode(array(
+		$output = array(
 			'error'		=> FALSE,
 			'message'	=> 'Job Removed',
 			'job'		=> $job_array,
-		));
+		);
+		$this->rest_output($output);
 	}
 
 }

@@ -90,4 +90,26 @@ class Job extends Entity{
 		return $job_array;
 	}
 
+	public function update($data, $format = 'array')
+	{
+		if ($format == 'array')
+		{
+			foreach ($data as $key => $value)
+			{
+				switch ($key) {
+					case 'progress':
+						$this->progress($value);
+						break;
+					case 'status':
+						$this->status($value);
+						break;
+					default:
+						# code...
+						break;
+				}
+			}
+		}
+		return $this;
+	}
+
 }

@@ -1,6 +1,11 @@
-<div class="container">
+<div class="container" ng-controller="jobs-controller">
 	<div class="row">
-		<div class="col-md-6 add-form" ng-controller="AddJobController">
+		<div class="col-md-12">
+			{{message}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 add-form">
 			<button class="btn btn-success" ng-click="addForm = !addForm">Add New Job</button><br><br>
 			<form ng-submit="add_job()" ng-show="addForm">
 				<input type="hidden" ng-value="formData.status">
@@ -32,22 +37,7 @@
 			</form>
 		</div>
 	</div>
-	<div class="row jobs" ng-controller="JobsController">
-		<div class="col-md-6" ng-repeat="job in jobs" ng-controller="JobController">
-			<form ng-submit="update_job()">
-				<h2><a href="{{job.link}}">{{job.title}}</a> 
-				<small><a href="{{job.company.website}}">{{job.company.title}}</a></small></h2>
-				<div class="form-group">
-					<select name="job-url" class="form-control" ng-model="job.progress">
-						<option value="Not Sent" selected>Not Sent</option>
-						<option value="App Sent">App Sent</option>
-						<option value="Dead End">Dead End</option>
-					</select>
-				</div>
-				<input type="submit" class="btn btn-success" value="Update">
-				<button class="btn btn-warning" ng-click="archive_job()">Archive</button>
-				<button class="btn btn-danger" ng-click="delete_job()">Delete</button>
-			</form>
-		</div>
+	<div class="row jobs">
+		<div class="col-md-4" ng-repeat="job in jobs" ng-include src="'/app/components/jobs/job-view.html'"></div>
 	</div>
 </div>

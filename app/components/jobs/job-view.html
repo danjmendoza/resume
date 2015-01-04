@@ -1,0 +1,20 @@
+<form ng-submit="update_job($index)">
+	<h2><a href="{{job.link}}">{{job.title}}</a> 
+	<small><a href="{{job.company.website}}">{{job.company.title}}</a></small></h2>
+	<div class="col-md-6">
+		{{job.date_added}}
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<select name="job-url" class="form-control" ng-model="job.progress">
+				<option value="Not Sent" selected>Not Sent</option>
+				<option value="App Sent">App Sent</option>
+				<option value="Dead End">Dead End</option>
+			</select>
+		</div>
+	</div>
+		
+	<input type="submit" class="btn btn-success" value="Update">
+	<button type="button" class="btn btn-warning" ng-click="archive_job($index)">Archive</button>
+	<button type="button" class="btn btn-danger" ng-click="delete_job($index)">Delete</button>
+</form>

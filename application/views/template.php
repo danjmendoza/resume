@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="danjmendoza">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +14,10 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="css/style.css" rel="stylesheet">
+		<link href="/assets/css/style.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -78,8 +78,7 @@
 				<div class="row">
 
 					<div class="col-md-3 text-center">
-
-						<div class="sprite illo"><img src="/img/dan.png"></div>
+						<div class="sprite illo"><img src="/assets/img/dan.png"></div>
 						<h4>Founder</h4>
 						<h4>ValleyDS Web Design</h4>
 					</div>
@@ -118,7 +117,8 @@
 		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-resource.min.js"></script>
-		<script src="/js/app.js"></script>
+		<script src="/app/app.module.js"></script>
+		<script src="/app/components/jobs/jobs-controller.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('.toggle').click(function(){
