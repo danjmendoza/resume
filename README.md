@@ -1,7 +1,17 @@
 # Dan J. Mendoza Job Listing Tool
 
 This project is designed to showcase my personal experiance, and includes a short bio, a portfolio page
-to show the types of projects I have worked on as well as an example of my coding ability.
+and an example of my coding ability.
+
+## Installation and site setup
+To setup the site to run on a local environment follow these simple steps:
+1. Clone the repository.
+2. Create /application/logs and application/cache and set permissions so they are writable.
+3. Use /danjmendoza.sql to setup a local database.
+4. Copy /application/config/database.php.bak to /application/config/database.php and configure for your enviornment.
+5. Copy .htaccess.bak to .htaccess
+
+The site should be ready to run at this point.
 
 ## Documentation
 The site is split into three major sections
