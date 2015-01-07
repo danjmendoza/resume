@@ -9,18 +9,25 @@ app.controller('jobs-controller', function($http, $scope, Job){
 	});
 
 	$scope.add_job = function() {
-		$http.post('/v1/jobs', $.param($scope.formData))
-			.success(function(response){
+		$http({
+			method: 'POST',
+			url: '/v1/jobs',
+			data: $.param($scope.formData),
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		}).success(function(response){
 				$scope.message = response.message;
 				if (response.error == false)
 				{
-					console.log(response.job);
+					$scope.jobForm.$setPristine();
+					$scope.formData = null;
+					$scope.formData = {};
+					$scope.jobs.splice(0, 0, response.job);
+					$scope.addForm = false;
 				}
 				else
 				{
-					$scope.addForm = false;
+					$scope.addForm = true;
 				}
-
 			});
 	};
 

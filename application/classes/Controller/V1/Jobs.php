@@ -29,7 +29,7 @@ class Controller_V1_Jobs extends  Controller_Rest {
 	public function action_create()
 	{
 		$post_data = $this->_params;
-		var_dump($post_data);
+
 		$company = Company::create()
 						->title($post_data['company']['title'])
 						->website($post_data['company']['website'])

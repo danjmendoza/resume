@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-md-6 add-form">
 			<button class="btn btn-success" ng-click="addForm = !addForm">Add New Job</button><br><br>
-			<form ng-submit="add_job()" ng-show="addForm">
+			<form name="jobForm" ng-submit="add_job()" ng-show="addForm">
 				<input type="hidden" ng-value="formData.status">
 				<div class="form-group col-md-6">
 					<input type="job-title" ng-model="formData.title" class="form-control" id="job-title" placeholder="Job Title">
