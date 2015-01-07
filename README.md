@@ -13,19 +13,20 @@ The site is split into three major sections
 I have setup a simple RESTful API using the Kohana PHP framework for working with jobs. All requests and responses use
 the json format for data. The frontend uses angularjs to handles the server calls. It also uses it's own templating engine 
 for some parts of the application.
-# GET
+### GET
 * /v1/jobs - returns all active jobs as JSON
 
-# POST
+### POST
 * /v1/jobs/ - Creates a new job and expects job data to be sent along with it
 
-# PUT
+### PUT
 * /v1/jobs/{job_id} - Updates a job with paramaters that are sent with the request
 
-DELETE
+### DELETE
 * /v1/jobs/{job_id} - Removes a job from the database and application.
 
 POST, PUT and DELETE requests return the job in the following format:
+```json
 {
 	id: 1,
 	title: 'Job Title',
@@ -39,20 +40,21 @@ POST, PUT and DELETE requests return the job in the following format:
 		website: 'http://www.company.com'
 	}
 }
+```
 
-## Relavant files
+## Relevant files
 If you are reviewing this code, the most relevant files are those associated with the jobs application.
 Those files can be categorized into the front end application, and the backend.
-# Frontend files
-/app/* - AngularJS files for MVC on frontend of the site.
-/application/classes/Controller/Jobs.php - Simple file that just loads the view for direct links.
-/application/views/jobs.php - Initial view file.
+### Frontend files
+* /app/* - AngularJS files for MVC on frontend of the site.
+* /application/classes/Controller/Jobs.php - Simple file that just loads the view for direct links.
+* /application/views/jobs.php - Initial view file.
 
-# Backend API files
-/application/classes/Controller/V1/Jobs.php - Handles RESTful
-/application/classes/Jobs.php - Takes care of reading writing Jobs to/from the database
-/application/classes/Company.php - Takes care of reading writing Companies to/from the database
-/application/classes/Model/* - ORM for database.
+### Backend API files
+* /application/classes/Controller/V1/Jobs.php - Handles RESTful
+* /application/classes/Jobs.php - Takes care of reading writing Jobs to/from the database
+* /application/classes/Company.php - Takes care of reading writing Companies to/from the database
+* /application/classes/Model/* - ORM for database.
 
 ## Todo
 I still need to setup Form validation and would like to cleanup the UI for the jobs page.
