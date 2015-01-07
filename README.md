@@ -1,19 +1,58 @@
-# Kohana PHP Framework
+# Dan J. Mendoza Job Listing Tool
 
-[Kohana](http://kohanaframework.org/) is an elegant, open source, and object oriented HMVC framework built using PHP5, by a team of volunteers. It aims to be swift, secure, and small.
-
-Released under a [BSD license](http://kohanaframework.org/license), Kohana can be used legally for any open source, commercial, or personal project.
+This project is designed to showcase my personal experiance, and includes a short bio, a portfolio page
+to show the types of projects I have worked on as well as an example of my coding ability.
 
 ## Documentation
-Kohana's documentation can be found at <http://kohanaframework.org/documentation> which also contains an API browser.
+The site is split into three major sections
+* http://www.danjmendoza.com/ is the bio page telling a bit about me.
+* http://www.danjmendoza.com/portfolio is the portfolio page categorizing and showing a sample of work I have done
+* http://www.danjmendoza.com/jobs is the application that allows for me to keep track of and jobs that I have applied for.
 
-The `userguide` module included in all Kohana releases also allows you to view the documentation locally. Once the `userguide` module is enabled in the bootstrap, it is accessible from your site via `/index.php/guide` (or just `/guide` if you are rewriting your URLs).
+## Jobs API
+I have setup a simple RESTful API using the Kohana PHP framework for working with jobs. All requests and responses use
+the json format for data. The frontend uses angularjs to handles the server calls. It also uses it's own templating engine 
+for some parts of the application.
+# GET
+* /v1/jobs - returns all active jobs as JSON
 
-## Reporting bugs
-If you've stumbled across a bug, please help us out by [reporting the bug](http://dev.kohanaframework.org/projects/kohana3/) you have found. Simply log in or register and submit a new issue, leaving as much information about the bug as possible, e.g.
+# POST
+* /v1/jobs/ - Creates a new job and expects job data to be sent along with it
 
-* Steps to reproduce
-* Expected result
-* Actual result
+# PUT
+* /v1/jobs/{job_id} - Updates a job with paramaters that are sent with the request
 
-This will help us to fix the bug as quickly as possible, and if you'd like to fix it yourself feel free to [fork us on GitHub](https://github.com/kohana) and submit a pull request!
+DELETE
+* /v1/jobs/{job_id} - Removes a job from the database and application.
+
+POST, PUT and DELETE requests return the job in the following format:
+{
+	id: 1,
+	title: 'Job Title',
+	link: 'http://www.company.com/job',
+	coverletter: 'Unique coverletter sent with appliacation',
+	status: 'active',
+	progress: 'app sent'
+	company: {
+		id: 1,
+		title: 'Company Name',
+		website: 'http://www.company.com'
+	}
+}
+
+## Relavant files
+If you are reviewing this code, the most relevant files are those associated with the jobs application.
+Those files can be categorized into the front end application, and the backend.
+# Frontend files
+/app/* - AngularJS files for MVC on frontend of the site.
+/application/classes/Controller/Jobs.php - Simple file that just loads the view for direct links.
+/application/views/jobs.php - Initial view file.
+
+# Backend API files
+/application/classes/Controller/V1/Jobs.php - Handles RESTful
+/application/classes/Jobs.php - Takes care of reading writing Jobs to/from the database
+/application/classes/Company.php - Takes care of reading writing Companies to/from the database
+/application/classes/Model/* - ORM for database.
+
+## Todo
+I still need to setup Form validation and would like to cleanup the UI for the jobs page.
