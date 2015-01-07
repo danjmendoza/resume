@@ -5,11 +5,13 @@ and an example of my coding ability.
 
 ## Installation and site setup
 To setup the site to run on a local environment follow these simple steps:
+
 1. Clone the repository.
-2. Create /application/logs and application/cache and set permissions so they are writable.
-3. Use /danjmendoza.sql to setup a local database.
-4. Copy /application/config/database.php.bak to /application/config/database.php and configure for your enviornment.
-5. Copy .htaccess.bak to .htaccess
+2. With Git run "git submodule init" and "git submodule udpate" to get third party modules.
+3. Create /application/logs and application/cache and set permissions so they are writable.
+4. Use /danjmendoza.sql to setup a local database.
+5. Copy /application/config/database.php.bak to /application/config/database.php and configure for your enviornment.
+6. Copy .htaccess.bak to .htaccess
 
 The site should be ready to run at this point.
 
