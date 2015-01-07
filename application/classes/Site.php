@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * handles retrieving of portfolio items from the database.
+ */
 class Site {
 
 	protected $orm_site = NULL;
