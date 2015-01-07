@@ -26,7 +26,7 @@ for some parts of the application.
 * /v1/jobs/{job_id} - Removes a job from the database and application.
 
 POST, PUT and DELETE requests return the job in the following format:
-```json
+```javascript
 {
 	id: 1,
 	title: 'Job Title',
