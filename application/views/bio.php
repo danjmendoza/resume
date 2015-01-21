@@ -10,7 +10,7 @@
 		<div class="col-trim">
 			<h2><span class="sprite experience"></span> Experience</h2>
 			<p>> <?php echo date('Y') - 2006; ?> years</p>
-			<p>Wordprss/Drupal/Kohana</p>
+			<p>Wordpress/Drupal/Kohana</p>
 			<p>Unit/Behavior Testing</p>
 		</div>
 		<div class="col-trim">
