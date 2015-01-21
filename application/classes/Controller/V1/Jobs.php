@@ -12,20 +12,6 @@ class Controller_V1_Jobs extends  Controller_Rest {
 		$this->rest_output($jobs);
 	}
 
-	public function action_update()
-	{
-		$job = Job::instance(ORM::factory('Job', $this->_params['id']))
-							->update($this->_params)
-							->save(TRUE);
-		$job_array = $job->as_array();
-		$output = array(
-			'error'		=> FALSE,
-			'message'	=> 'Job '.$job->title().' Updated',
-			'job'		=> $job_array,
-		);
-		$this->rest_output($output);
-	}
-
 	public function action_create()
 	{
 		$post_data = $this->_params;
@@ -48,6 +34,20 @@ class Controller_V1_Jobs extends  Controller_Rest {
 			'error'		=> FALSE,
 			'message'	=> 'Job Added',
 			'job'		=> $job->as_array(),
+		);
+		$this->rest_output($output);
+	}
+
+	public function action_update()
+	{
+		$job = Job::instance(ORM::factory('Job', $this->_params['id']))
+							->update($this->_params)
+							->save(TRUE);
+		$job_array = $job->as_array();
+		$output = array(
+			'error'		=> FALSE,
+			'message'	=> 'Job '.$job->title().' Updated',
+			'job'		=> $job_array,
 		);
 		$this->rest_output($output);
 	}
