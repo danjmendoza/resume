@@ -8,7 +8,7 @@
 		<meta name="keywords" content="PHP, Kohana, Exeter, CA, Wordpress, Exeter, California, Drupal, jQuery, CA">
 		<meta name="author" content="Dan Mendoza">
 
-		<title>Dan Mendoza, Programer / architect / developer</title>
+		<title>Dan Mendoza, Programmer / architect / developer</title>
 
 		<!-- load font -->
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -85,7 +85,7 @@
 
 					<div class="col-md-5">
 						<h1>Dan Mendoza</h1>
-						<p>Programer / architect / developer</p>
+						<p>Programmer / architect / developer</p>
 						<p>danjmendoza.com</p>
 						<p><a href="#" data-toggle="modal" data-target="#contact"><span class="sprite comment"></span>Say Hi</a></p>
 					</div>
