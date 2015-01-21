@@ -101,6 +101,20 @@ a.gallery:visited {
 	width:100%;
 	vertical-align: top;
 }
+.categories {
+	text-align: center;
+}
+.categories li {
+	display: inline-block;
+	margin:0px 21px;
+}
+.item {
+	margin-bottom: 21px;
+	text-align: center;
+}
+.item a {
+	margin-bottom: 7px;
+}
 .modal-dialog {
 	z-index: 2000;
 }

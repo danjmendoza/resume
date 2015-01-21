@@ -3,9 +3,9 @@
 		<div class="col-md-12">
 			<ul class="categories">
 				<!-- <li><a href="#filters" rel="github">Github Projects</a></li> -->
-				<li><a href="#filters" rel="kohana">Kohana</a></li>
-				<li><a href="#filters" rel="drupal">Drupal</a></li>
-				<li><a href="#filters" rel="wordpress">Wordpress</a></li>
+				<li><a href="#filters" class="btn btn-alex active" rel="kohana">Kohana</a></li>
+				<li><a href="#filters" class="btn btn-alex active" rel="drupal">Drupal</a></li>
+				<li><a href="#filters" class="btn btn-alex active" rel="wordpress">Wordpress</a></li>
 				<!-- <li><a href="#filters" rel="jquery">jQuery</a></li> -->
 			</ul>
 		</div>
