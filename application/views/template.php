@@ -17,7 +17,7 @@
 		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="/assets/css/style.css" rel="stylesheet">
+		<link href="/assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
 
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
